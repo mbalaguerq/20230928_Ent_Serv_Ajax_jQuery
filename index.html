@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="modedia.css" id="modo-dia-css">
+	<link rel="stylesheet" href="modenit.css" id="modo-noche-css" disabled>
+	<script src="jquery.min.js"></script>
+	
+	<title></title>
+
+	<style type="text/css">
+		header{
+			min-height:400px;
+			background-image: url("https://images.pexels.com/photos/6929189/pexels-photo-6929189.jpeg");
+			background-size: cover;
+		}
+		header nav{	float:right; font-size:3em; }
+		header h1{ text-align:center; color:#defaff; font-size:4em; margin:0; padding-top:50px; clear:both; }
+	</style>
+</head>
+<body>
+	
+
+	<header>
+		<nav></nav>
+
+		<h1>INICIO</h1>	
+	</header>
+	
+	Modo noche: 
+	<input type="checkbox" onchange="cambioChekbox(this)">
+	<span id="aviso"> </span>
+
+
+	<h2>titulo secundario</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<h2>titulo secundario</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<h2>titulo secundario</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<div id="footer"></div>
+
+	
+	
+
+	<script type="text/javascript">
+		function cambioChekbox(elem) {
+    var modoDiaCss = document.getElementById("modo-dia-css");
+    var modoNocheCss = document.getElementById("modo-noche-css");
+
+    if (elem.checked) {
+        $("#aviso").html("Modo noche activado");
+        setTimeout(function () { $("#aviso").html(" ") }, 1000);
+
+        modoDiaCss.disabled = true;
+        modoNocheCss.disabled = false;
+    } else {
+        $("#aviso").html("Modo noche desactivado");
+        setTimeout(function () { $("#aviso").html(" ") }, 1000);
+
+        modoDiaCss.disabled = false;
+        modoNocheCss.disabled = true;
+    }
+}
+	</script>
+	<script>
+        // Cargar el encabezado
+        $(document).ready(function() {
+            $("header nav").load("nav.html");
+        });
+
+        // Cargar el pie de página
+        $(document).ready(function() {
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="footer"></div>
+
+    <script>
+        // Cargar el encabezado
+        $(document).ready(function() {
+            $("#header").load("nav.html");
+        });
+
+        // Cargar el pie de página
+        $(document).ready(function() {
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+</html>
