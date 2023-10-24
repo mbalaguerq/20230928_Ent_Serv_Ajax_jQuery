@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="modedia.css" id="modo-dia-css">
 	<link rel="stylesheet" href="modenit.css" id="modo-noche-css" disabled>
-	<script src="jquery.min.js"></script>
+	
 	
 	<title></title>
 
@@ -23,7 +23,7 @@
 	
 
 	<header>
-		<nav></nav>
+		<nav id="headerNav"></nav>
 
 		<h1>INICIO</h1>	
 	</header>
@@ -61,7 +61,7 @@
 
 	
 	
-
+	<script src="jquery.min.js"></script>
 	<script type="text/javascript">
 		function cambioChekbox(elem) {
     var modoDiaCss = document.getElementById("modo-dia-css");
@@ -85,7 +85,7 @@
 	<script>
         // Cargar el encabezado
         $(document).ready(function() {
-            $("header nav").load("nav.html");
+            $("#headerNav").load("nav.html");
         });
 
         // Cargar el pie de página
